@@ -10,6 +10,12 @@ import { ThirdQuestionComponent } from './components/questions/third-question/th
 import { ForthQuestionComponent } from './components/questions/forth-question/forth-question.component';
 import { FifthQuestionComponent } from './components/questions/fifth-question/fifth-question.component';
 import { SixthQuestionComponent } from './components/questions/sixth-question/sixth-question.component';
+import { SeventhQuestionComponent } from './components/questions/seventh-question/seventh-question.component';
+import { EighthQuestionComponent } from './components/questions/eighth-question/eighth-question.component';
+import { NinthQuestionComponent } from './components/questions/ninth-question/ninth-question.component';
+import { TenthQuestionComponent } from './components/questions/tenth-question/tenth-question.component';
+import { EleventhQuestionComponent } from './components/questions/eleventh-question/eleventh-question.component';
+
 import { ZipCodeComponent } from './components/continue/zip-code/zip-code.component';
 import { NameComponent } from './components/continue/name/name.component';
 import { EmailComponent } from './components/continue/email/email.component';
@@ -33,10 +39,16 @@ const appRoutes: Routes = [
     ForthQuestionComponent,
     FifthQuestionComponent,
     SixthQuestionComponent,
+    SeventhQuestionComponent,
+    EighthQuestionComponent,
+    NinthQuestionComponent,
+    TenthQuestionComponent,
+    EleventhQuestionComponent,
     ZipCodeComponent,
     NameComponent,
     EmailComponent,
     AddressComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,20 @@ export class FifthQuestionComponent implements OnInit {
 
   ngOnInit() {
   }
-  nextQuestion(selected){
-    this.messageEvent.emit({question:"FifthQuestion",selected:selected});
+ 
+  nextInput(){
+    
+    var homeValue = (<HTMLInputElement>document.getElementById('homeValue')).value;
+    this.newMethod(homeValue);
+
+}
+
+  private newMethod(homeValue: string) {
+    if (homeValue.length >= 5) {
+      this.messageEvent.emit({ HomeValue: homeValue });
+    }
+    else {
+      alert("You must enter your estimated home's value");
+    }
   }
 }

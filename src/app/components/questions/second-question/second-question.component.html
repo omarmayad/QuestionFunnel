@@ -1,36 +1,15 @@
-<div class="questions-block secondqqq">
+<div class="questions-block ">
 	<div class="page-header">
-  <h3>Please select the position you would like to apply for&#63; </h3>
+  <h3>You may be eligible to lower your mortgage payments by refinancing. Would you like to answer a few questions to see if you qualify&#63; </h3>
 </div>
 
   <div class=" card col col-md-12">
   <div class="card-block">
       
-   <button type="button" class="btn btn-success btn-lg" (click)="addOption('Delivery Driver')">Delivery Driver</button>
+      <button type="button" (click)="nextQuestion('Yes')" class="btn btn-success btn-lg" >Yes</button>
 
-  <button type="button" class="btn btn-success btn-lg" (click)="addOption('Cashier')">Cashier</button>
-
-   <button type="button" class="btn btn-success btn-lg" (click)="addOption('Stocker')">Stocker</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Sales')">Sales</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Customer Service')">Customer Service</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Clerical or Admin')">Clerical or Admin</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Package Handler')">Package Handler</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('IT')">IT</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Accounting')">Accounting</button>
-      
-      <button type="button" class="btn btn-success btn-lg" (click)="addOption('Other')">Other</button>
-
-      <button type="button" class="btn btn-warning btn-lg" (click)="nextQuestion()">Next</button>
+      <button type="button" (click)="nextQuestion('No')" class="btn btn-danger btn-lg" ><input type="hidden" id="Userinput" value="No">No</button>
+          
   </div>
 </div>
-</div>
-
-<div class="selected-options">
-  <button type="button" *ngFor="let option of Options" class="btn btn-primary btn-md OptionBtn disabled">{{option}}</button>  
 </div>

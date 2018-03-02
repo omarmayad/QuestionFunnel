@@ -15,7 +15,8 @@
 
 <div class="jumbotron">
   <div class="page-header" [ngStyle]="{'background-color':currentColor}"> 
-			<h1> Sorting through <strong>3M+ </strong>jobs</h1>
+			<h1 *ngIf="userType=='No'" (messageEvent)="receiveEvent($event)"> Sorting through <strong>3M+ </strong>jobs</h1>
+			<h1 *ngIf="userType=='Yes'" (messageEvent)="receiveEvent($event)">Increasing your net income by lower your expenses</h1>
 </div>
     
 
@@ -25,7 +26,11 @@
 <app-forth-question *ngIf="currentQuestion=='ForthQuestion'" (messageEvent)="receiveEvent($event)"></app-forth-question>
 <app-fifth-question *ngIf="currentQuestion=='FifthQuestion'" (messageEvent)="receiveEvent($event)"></app-fifth-question>
 <app-sixth-question *ngIf="currentQuestion=='SixthQuestion'" (messageEvent)="receiveEvent($event)"></app-sixth-question>
-
+<app-seventh-question *ngIf="currentQuestion=='SeventhQuestion'" (messageEvent)="receiveEvent($event)"></app-seventh-question>
+<app-eighth-question *ngIf="currentQuestion=='EighthQuestion'" (messageEvent)="receiveEvent($event)"></app-eighth-question>
+<app-ninth-question *ngIf="currentQuestion=='NinthQuestion'" (messageEvent)="receiveEvent($event)"></app-ninth-question>
+<app-tenth-question *ngIf="currentQuestion=='TenthQuestion'" (messageEvent)="receiveEvent($event)"></app-tenth-question>
+<app-eleventh-question *ngIf="currentQuestion=='EleventhQuestion'" (messageEvent)="receiveEvent($event)"></app-eleventh-question>
 
   <div class="container col-sm-10 push-sm-2">
 
