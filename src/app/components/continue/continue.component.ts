@@ -8,7 +8,7 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class ContinueComponent implements OnInit {
   inputsList:any=["FirstInput","SecondInput","ThirdInput",
-  "ForthInput","FifthInput"];
+  "ForthInput"];
   index = 0;
   currentInput=this.inputsList[this.index]; 
   AllTheSelectedInputs=[] ;
@@ -27,10 +27,10 @@ export class ContinueComponent implements OnInit {
 
     console.log(this.percentage)
     this.AllTheSelectedInputs.push($event);
-    if(this.index == 5){
+    if(this.index == 4){
       //go to final page
       localStorage.setItem('inputs', JSON.stringify(this.AllTheSelectedInputs));
-      this.router.navigateByUrl('/continue');
+      this.router.navigateByUrl('/questions');
     }
   }
 

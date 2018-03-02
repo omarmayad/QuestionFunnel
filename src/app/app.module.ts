@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ContinueComponent } from './components/continue/continue.component';
-import { IndexComponent } from './components/index/index.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { FirstQuestionComponent } from './components/questions/first-question/first-question.component';
 import { SecondQuestionComponent } from './components/questions/second-question/second-question.component';
@@ -12,23 +11,21 @@ import { ForthQuestionComponent } from './components/questions/forth-question/fo
 import { FifthQuestionComponent } from './components/questions/fifth-question/fifth-question.component';
 import { SixthQuestionComponent } from './components/questions/sixth-question/sixth-question.component';
 import { ZipCodeComponent } from './components/continue/zip-code/zip-code.component';
-import { BirthComponent } from './components/continue/birth/birth.component';
-import { PhoneComponent } from './components/continue/phone/phone.component';
 import { NameComponent } from './components/continue/name/name.component';
 import { EmailComponent } from './components/continue/email/email.component';
+import { AddressComponent } from './components/continue/address/address.component';
 
 
 const appRoutes: Routes = [
   { path: 'continue', component: ContinueComponent },
   { path: 'questions', component: QuestionsComponent },
-  { path: '**', component: IndexComponent },
+  { path: '**', component: ContinueComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ContinueComponent,
-    IndexComponent,
     QuestionsComponent,
     FirstQuestionComponent,
     SecondQuestionComponent,
@@ -37,10 +34,9 @@ const appRoutes: Routes = [
     FifthQuestionComponent,
     SixthQuestionComponent,
     ZipCodeComponent,
-    BirthComponent,
-    PhoneComponent,
     NameComponent,
     EmailComponent,
+    AddressComponent,
   ],
   imports: [
     BrowserModule,
