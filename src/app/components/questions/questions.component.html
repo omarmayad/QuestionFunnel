@@ -15,23 +15,23 @@
 
 <div class="jumbotron">
   <div class="page-header" [ngStyle]="{'background-color':currentColor}"> 
-			<h1 *ngIf="userType=='No'" (messageEvent)="receiveEvent($event)"> Sorting through <strong>3M+ </strong>jobs</h1>
-			<h1 *ngIf="userType=='Yes'" (messageEvent)="receiveEvent($event)">Increasing your net income by lower your expenses</h1>
+			
+			<h1>Increasing your <strong>net income</strong> by lowering your <strong>expenses</strong></h1>
 </div>
     
 
 <app-first-question *ngIf="currentQuestion=='FirstQuestion'" (messageEvent)="receiveEvent($event)"></app-first-question>
+<app-thirteenth-question *ngIf="currentQuestion=='ThirteenthQuestion'" (messageEvent)="receiveEvent($event)"></app-thirteenth-question>
 <app-second-question *ngIf="currentQuestion=='SecondQuestion'" (messageEvent)="receiveEvent($event)"></app-second-question>
 <app-third-question *ngIf="currentQuestion=='ThirdQuestion'" (messageEvent)="receiveEvent($event)"></app-third-question>
 <app-forth-question *ngIf="currentQuestion=='ForthQuestion'" (messageEvent)="receiveEvent($event)"></app-forth-question>
 <app-fifth-question *ngIf="currentQuestion=='FifthQuestion'" (messageEvent)="receiveEvent($event)"></app-fifth-question>
-<app-sixth-question *ngIf="currentQuestion=='SixthQuestion'" (messageEvent)="receiveEvent($event)"></app-sixth-question>
 <app-seventh-question *ngIf="currentQuestion=='SeventhQuestion'" (messageEvent)="receiveEvent($event)"></app-seventh-question>
 <app-eighth-question *ngIf="currentQuestion=='EighthQuestion'" (messageEvent)="receiveEvent($event)"></app-eighth-question>
 <app-ninth-question *ngIf="currentQuestion=='NinthQuestion'" (messageEvent)="receiveEvent($event)"></app-ninth-question>
 <app-tenth-question *ngIf="currentQuestion=='TenthQuestion'" (messageEvent)="receiveEvent($event)"></app-tenth-question>
 <app-eleventh-question *ngIf="currentQuestion=='EleventhQuestion'" (messageEvent)="receiveEvent($event)"></app-eleventh-question>
-
+<app-twelfth-question *ngIf="currentQuestion=='TwelfthQuestion'" (messageEvent)="receiveEvent($event)"></app-twelfth-question>
   <div class="container col-sm-10 push-sm-2">
 
 			<div class="progress ">
@@ -46,8 +46,8 @@
 				 
 			</div>
 			<div class="progress-meter">
-				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Qualify</span></div>
 				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Profile</span></div>
+				<div class="meter meter-left" style="width: 25%;"><span class="meter-text">Qualify</span></div>
     			<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Finish!</span></div>
 				<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Positions</span></div>
 			</div>

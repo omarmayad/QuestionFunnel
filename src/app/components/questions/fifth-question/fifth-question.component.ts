@@ -7,6 +7,8 @@ import { Output } from '@angular/core';
 })
 export class FifthQuestionComponent implements OnInit {
   @Output() messageEvent = new EventEmitter<any>();
+
+
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +18,7 @@ export class FifthQuestionComponent implements OnInit {
     
     var homeValue = (<HTMLInputElement>document.getElementById('homeValue')).value;
     this.newMethod(homeValue);
+    
 
 }
 

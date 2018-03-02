@@ -1,0 +1,13 @@
+<div class="questions-block ">
+    <div class="page-header">
+    <h3>What is your annual income&#63;</h3>
+  </div>
+  <div class="card col-md-12">
+    <div class="card-block">
+        <input type="text" id="incomeValue" placeholder="Ex $50,000" style="width:30%"  (input)="incomeValue = $event.target.value" value="{{ incomeValue | currency:'USD':'symbol-narrow'}}"> 
+        <!--<p>{{ incomeValue | currency:'USD':'symbol-narrow'}}</p>-->
+        <button type="button" class="btn btn-success btn-lg btn-block" (click)="nextInput()">Continue >></button>
+        
+    </div>
+  </div>
+  </div>

@@ -12,19 +12,19 @@ export class AddressComponent implements OnInit {
 
   ngOnInit() {
   }
-  nextInput(){
-    
-    var address = (<HTMLInputElement>document.getElementById('address')).value;
-    this.newMethod(address);
+ 
 
+nextInput(){
+  var address = (<HTMLInputElement>document.getElementById('address')).value;
+  var city = (<HTMLInputElement>document.getElementById('city')).value;
+  this.name(address,city);
 }
-
-  private newMethod(address: string) {
-    if (address.length >= 5) {
-      this.messageEvent.emit({ Address: address });
-    }
-    else {
-      alert("You must enter an address");
-    }
+private name(address:string,city:string) {
+  if(address.length && city.length >= 1){
+    this.messageEvent.emit({Address:address,City:city});
   }
+  else{
+    alert("Please enter your Street address and your city");
+  }
+}
 }
